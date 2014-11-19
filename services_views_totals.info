@@ -1,0 +1,4 @@
+name = Services Views Totals
+description = This module adds pager totals (results) to REST output in Services Views. Created by <a href="http://christophermchurch.com">Christopher M. Church</a>.
+core = 7.x
+dependencies[]=services_views
