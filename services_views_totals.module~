@@ -12,10 +12,7 @@ function services_views_totals_services_views_execute_view_alter(&$output, $view
      $page_results = count($view->result);
      $current_page = $view->query->pager->current_page;
      $items_per_page = $view->get_items_per_page();
-     if ($items_per_page>0&&$total_results>$items_per_page) {
-	$total_pages = $total_results/$items_per_page-1;
-	}
-	else {$total_pages=1;}
+     $total_pages = $total_results/$items_per_page-1;
      $start = ($current_page) * $items_per_page + 1;
      $end = $start+$page_results-1;	
  

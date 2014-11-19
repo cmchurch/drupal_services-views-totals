@@ -1,0 +1,22 @@
+<?php
+/*
+ * results as separate value in response.
+ *
+ * @param array $output
+ *   Results of the view execution. These will be sent to services for renderin$
+ * @param object $view
+ *   Views object.
+ */
+function services_views_totals_services_views_execute_view_alter(&$output, $view) {
+    $paged_output = array(
+      'results' => $output,
+      'metadata' => array(
+	 'total_results' => $view->total_rows,
+	 'items_per_page' => $view->query->pager->current_page,
+         'display_start' => 'start',
+         'display_end' => 'end')
+    );
+    $output = $paged_output;
+}
+
+?>

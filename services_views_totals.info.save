@@ -1,0 +1,8 @@
+name = Services Views Totals
+description = This module adds pager totals (results) to REST output in Service$
+author = Christopher Church
+core = 7.x
+dependencies[]=services_viewname = JSON Pager Totals (Services Views)
+description = This module adds pager totals (results) to REST output in Services Views. This was created by <a href="http://www.christophermchurch.com">Christopher M. Church</a>
+core = 7.x
+dependencies[]=services_views
